@@ -1,3 +1,9 @@
+/* 全局样式类 */
+/* 组件导入示例：import '@/app/ui/global.css';*/
+/**
+ *  Tailwind is a CSS framework 它允许你快速编写实用程序类 ，从而加快开发过程直接在你的 React 代码中。
+
+ */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

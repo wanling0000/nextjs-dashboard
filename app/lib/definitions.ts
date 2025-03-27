@@ -2,7 +2,9 @@
 // It describes the shape of the data, and what data type each property should accept.
 // For simplicity of teaching, we're manually defining these types.
 // However, these types are generated automatically if you're using an ORM such as Prisma.
-export type User = {
+// We're manually declaring the data types, but for better type-safety, we recommend Prisma or Drizzle,
+// which automatically generates types based on your database schema. https://nextjs.org/learn/dashboard-app/getting-started
+export type User = { // type == class in Java; export == public class can be used by other class
   id: string;
   name: string;
   email: string;
@@ -23,6 +25,8 @@ export type Invoice = {
   date: string;
   // In TypeScript, this is called a string union type.
   // It means that the "status" property can only be one of the two strings: 'pending' or 'paid'.
+  // 它规定 status 这个字段只能取 'pending' 或 'paid' 这两个字符串之一。
+  // 类比 Java：有点像我们定义了一个 enum Status { PENDING, PAID }，但在 TypeScript 中是用字符串来做限制。
   status: 'pending' | 'paid';
 };
 
